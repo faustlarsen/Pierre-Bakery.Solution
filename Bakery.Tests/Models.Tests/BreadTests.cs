@@ -13,5 +13,11 @@ namespace Bakery.Tests
     Assert.AreEqual(typeof(Bread), purchase.GetType());
     }
 
+    [TestMethod]
+    public void BreadConstructor_ExceptsAmount_Int()
+    {
+    Bread purchase = new Bread(2);
+    Assert.AreEqual(true, purchase.AmountOfBread(2));
+    }
   }
 } 
